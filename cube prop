@@ -1,0 +1,21 @@
+memory 80 gb
+
+molecule is6 {
+0 1
+
+
+
+
+}
+
+set {
+
+cubeprop_tasks ['orbitals']
+
+basis cc-pvdz
+scf_type df
+freeze_core true
+}
+
+E,wfn=energy('scf',return_wfn=True)
+cubeprop(wfn)
