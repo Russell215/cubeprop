@@ -1,0 +1,17 @@
+$molecule
+   0 1
+$end
+
+$rem
+   BASIS               *
+   EXCHANGE            gen
+   TAO_DFT             true
+   TAO_DFT_THETA       40  ! theta = 40 mhartree
+   TAO_DFT_THETA_NDP   3
+$end
+
+$xc_functional
+   X PBE         1.0
+   C PBE         1.0
+   X ETheta_LDA  1.0
+$end
