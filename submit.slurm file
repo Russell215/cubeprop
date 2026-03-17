@@ -1,0 +1,15 @@
+#! /bin/bash
+
+#SBATCH --job-name 
+#SBATCH --nodes 1
+#SBATCH --cpus-per-task 8
+#SBATCH --mem 40gb
+#SBATCH --partition skystd
+#SBATCH --time 02:00:00
+
+export QCSCRATCH=$TMPDIR
+
+module load qchem
+
+qchem -np 8 input.dat output.dat
+~                              
